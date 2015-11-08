@@ -1,0 +1,10 @@
+[
+{
+	"name": "evl-jukebox-ticker",
+	"title": "Evl Jukebox Ticker", 
+	"width": 2,
+	"file": "panel.jade",
+	"faIcon": "fa-gg-circle"
+
+}
+]
