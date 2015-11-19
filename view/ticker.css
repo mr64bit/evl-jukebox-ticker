@@ -1,5 +1,76 @@
-#container #matchid {
-overflow:hidden;
+#container {
+  width: 1280px;
+  height: 720px;
+  position:absolute;
+  top:0;
+  left:0
+
+}
+#shape {
+   width: 100px;
+    height: 50px;
+    background: url('/view/evl-jukebox-ticker/img/shape.png');
+    background-size: 80px;
+    background-repeat:no-repeat;
+    position: absolute;
+    top: 0;
+    left:-100px;
+    z-index: 1;
+    display:inline-block;
 
 
+}
+#ticker-heading {
+  background-color:blue;
+  width: 110px;
+  height: 44px;
+ display:inline;
+ float:left;
+  position: absolute;
+    top:2px;
+    left: -150px;
+      font-family: "AvenirLTStd-Medium", Helvetica, Arial, sans-serif;
+text-align:center;
+}
+#matchid {
+  overflow:hidden;
+    white-space:nowrap;
+    font-family: "AvenirLTStd-Medium", Helvetica, Arial, sans-serif;
+    max-width: 40.5%;
+    min-width: 33%; ;
+     width: auto;
+    background-color:red;
+    display:inline-block;
+    height:44px;
+     position: absolute;
+   top: 2px;
+    left:-450px;
+z-index: -2;
+    
+   
+}
+.match-info {
+    display:inline-block;
+    width: 200px; 
+}
+.team-names {
+  display:inline-block;
+}
+.team-scores {
+   display:inline-block;
+   margin-left: 20px;
+}
+.map-info {  display:inline-block;
+   margin-left: 20px;}
+.map-state {
+display:inline-block;
+margin-left: 20px;
+ }
+h2 {
+  font-size: 14px ;
+  color:white;
+  margin:0;
+  padding:0;
+line-height:44px;
+  
 }
