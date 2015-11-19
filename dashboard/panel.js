@@ -7,3 +7,7 @@ $('#evl-jukebox_in').click(function () {
 $('#evl-jukebox_out').click(function () {
 	nodecg.sendMessage('jukebox_out');
 });
+
+$('#evl-jukebox_getdata').click(function () {
+	nodecg.sendMessage('jukebox_data');
+});

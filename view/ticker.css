@@ -1,3 +1,13 @@
+@font-face {
+font-family: juice;
+src: url(fonts/JUICE_Regular.ttf);
+
+}
+@font-face {
+font-family: code;
+src: url(fonts/CODE_Bold.otf);
+
+}
 #container {
   width: 1280px;
   height: 720px;
@@ -7,9 +17,9 @@
 
 }
 #shape {
-   width: 100px;
-    height: 50px;
-    background: url('/view/evl-jukebox-ticker/img/shape.png');
+   width: 70px;
+    height: 0;
+    
     background-size: 80px;
     background-repeat:no-repeat;
     position: absolute;
@@ -17,37 +27,50 @@
     left:-100px;
     z-index: 1;
     display:inline-block;
-
+margin: 0 0 10px 0;
+border-top: 35px solid #222222;
+border-right: 10px solid transparent;
 
 }
 #ticker-heading {
-  background-color:blue;
+
   width: 110px;
-  height: 44px;
+  height:0 ;
  display:inline;
  float:left;
   position: absolute;
     top:2px;
     left: -150px;
-      font-family: "AvenirLTStd-Medium", Helvetica, Arial, sans-serif;
+      font-family: juice;
 text-align:center;
+padding-left: 15px;
+padding-right:5px;
+margin: 0 0 10px 0;
+border-bottom: 30px solid #58798a;
+border-right: 10px solid transparent;
+
+
 }
 #matchid {
-  overflow:hidden;
+ 
     white-space:nowrap;
-    font-family: "AvenirLTStd-Medium", Helvetica, Arial, sans-serif;
+    font-family: code;
     max-width: 40.5%;
-    min-width: 33%; ;
+    min-width: 33%;
      width: auto;
-    background-color:red;
+   
     display:inline-block;
-    height:44px;
+    height:0;
      position: absolute;
    top: 2px;
     left:-450px;
 z-index: -2;
-    
-   
+   line-height: 30px;
+    font-size: 16px; 
+margin: 0 0 10px 0;
+border-bottom: 30px solid #bc3b3a;
+border-right: 10px solid transparent;
+color:white;
 }
 .match-info {
     display:inline-block;
@@ -71,6 +94,6 @@ h2 {
   color:white;
   margin:0;
   padding:0;
-line-height:44px;
+line-height:30px;
   
 }
