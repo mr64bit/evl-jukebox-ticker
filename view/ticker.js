@@ -41,7 +41,7 @@ $(function() {
 	
 	    var t2 = new TimelineLite({paused: true});
             t2.to($('#ticker-heading'), 0.5, {left: '-190px'}, '0.5');
-            t2.to($('#matchid'), 0.6, {left: '-450px', ease: Quad.easeOut}, '0');
+            t2.to($('#matchid'), 0.6, {left: '-850px', ease: Quad.easeOut}, '0');
             t2.to($('#shape'), 0.5, {left: '-100px', ease: Quad.easeOut}, '0.6');
 	    $.ionSound.play('lowerthird_out');
   	    t2.play();
