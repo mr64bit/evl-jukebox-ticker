@@ -28,23 +28,23 @@ src: url(fonts/CODE_Bold.otf);
     z-index: 1;
     display:inline-block;
 margin: 0 0 10px 0;
-border-top: 35px solid #222222;
-border-right: 10px solid transparent;
+border-top: 75px solid #222222;
+border-right: 20px solid transparent;
 
 }
 #ticker-heading {
 
-  width: 110px;
+  width: 140px;
   height:0 ;
+  letter-spacing: 2px;
  display:inline;
  float:left;
   position: absolute;
     top:2px;
-    left: -150px;
-      font-family: juice;
+    left: -190px;
+      font-family: code;
 text-align:center;
-padding-left: 15px;
-padding-right:5px;
+padding-left: 20px;
 margin: 0 0 10px 0;
 border-bottom: 30px solid #58798a;
 border-right: 10px solid transparent;
@@ -54,30 +54,35 @@ border-right: 10px solid transparent;
 #matchid {
  
     white-space:nowrap;
-    font-family: code;
+    font-family: juice;
     max-width: 40.5%;
-    min-width: 33%;
+    min-width: 35%;
      width: auto;
    
-    display:inline-block;
+   
     height:0;
      position: absolute;
-   top: 2px;
+   top: 34px;
     left:-450px;
 z-index: -2;
-   line-height: 30px;
+   line-height: 32px;
     font-size: 16px; 
 margin: 0 0 10px 0;
 border-bottom: 30px solid #bc3b3a;
 border-right: 10px solid transparent;
 color:white;
+padding-left: 1px;
+letter-spacing: 1.2;
 }
 .match-info {
     display:inline-block;
-    width: 200px; 
+        width: 100%; 
+ 
 }
 .team-names {
   display:inline-block;
+  margin-left: 10px;
+
 }
 .team-scores {
    display:inline-block;
@@ -90,10 +95,10 @@ display:inline-block;
 margin-left: 20px;
  }
 h2 {
-  font-size: 14px ;
+  font-size: 15px ;
   color:white;
   margin:0;
   padding:0;
-line-height:30px;
+line-height:32px;
   
 }

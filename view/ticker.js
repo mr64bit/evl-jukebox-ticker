@@ -21,9 +21,9 @@ $(function() {
             var tl = new TimelineLite({paused: true});
 
             //add our tweens to the timeline
-            tl.to($('#ticker-heading'), 0.5, {left: '5px'}, '0');
-            tl.to($('#matchid'), 0.6, {left: '130px', ease: Quad.easeOut}, '0.5');
-            tl.to($('#shape'), 0.5, {left: '-60px', ease: Quad.easeOut}, '0');
+            tl.to($('#ticker-heading'), 0.5, {left: '0px'}, '0');
+            tl.to($('#matchid'), 0.6, {left: '0px', ease: Quad.easeOut}, '0.5');
+            tl.to($('#shape'), 0.5, {left: '-70px', ease: Quad.easeOut}, '0');
            // tl.to($('#lowerthirdtextcontainer'), 0.6, {left: '0%', ease: Quad.easeOut}, '0.025');
 	     $.ionSound.play('lowerthird_in');
             tl.play();
@@ -40,7 +40,7 @@ $(function() {
 	function hideJukebox() {
 	
 	    var t2 = new TimelineLite({paused: true});
-            t2.to($('#ticker-heading'), 0.5, {left: '-150px'}, '0.5');
+            t2.to($('#ticker-heading'), 0.5, {left: '-190px'}, '0.5');
             t2.to($('#matchid'), 0.6, {left: '-450px', ease: Quad.easeOut}, '0');
             t2.to($('#shape'), 0.5, {left: '-100px', ease: Quad.easeOut}, '0.6');
 	    $.ionSound.play('lowerthird_out');
@@ -74,10 +74,16 @@ $(function() {
                                                 var score2 = value.losing_team_score;
                                                 var map = value.match_map.map;
                                                 var state = value.match_map.state;
-
+						
+						if (state == 'pregame' || 'playing') {
+							state =  'In Progress'; }
+						if (state == 'golden_cap') {
+							state = 'OT';}
+						if (state == 'postgame' || 'ended') {
+							state = 'Final'; }
                                         //var matchBlock = "<div class='team-names'>" +  value.losing_team.tag  + "vs" + value.winning_team.tag +  "</div>"
 
-                                                var matchBlock = "<div class='match-info'> <div class='map-state'>" + state + "</div>"
+                                                var matchBlock = "<div class='match-info'> <div class='map-state'>" + state.toUpperCase() + "</div>"
                                                                 + " <div class='team-names'>" + team1  + " vs " + team2 + "</div>"
                                                                 + "<div class='team-scores'>" + score1 + " to " + score2 + "</div>"
                                                                 + "<div class='map-info'>" + map + "</div>"
@@ -104,7 +110,7 @@ $(function() {
 });
 function tick() {
     var $obj = $("#container #matchid .match-info");
-    $obj.first().fadeIn().delay(3000).fadeOut(function () {
+    $obj.first().fadeIn().delay(5000).fadeOut(function () {
         $obj.first().insertAfter($obj.last());
         
 	tick();
