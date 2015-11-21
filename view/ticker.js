@@ -75,12 +75,14 @@ $(function() {
                                                 var map = value.match_map.map;
                                                 var state = value.match_map.state;
 						
-						if (state == 'pregame' || 'playing') {
-							state =  'In Progress'; }
-						if (state == 'golden_cap') {
-							state = 'OT';}
-						if (state == 'postgame' || 'ended') {
-							state = 'Final'; }
+                                                if (eventType == 'map_score') {
+                                                    if (state == 'golden_cap') {
+                                                        state = 'OT'; }
+                                                    else {
+                                                        state = 'In Progress'; }}
+
+                                                if (eventType == 'map_end') {
+                                                    state = 'Final'; }
                                         //var matchBlock = "<div class='team-names'>" +  value.losing_team.tag  + "vs" + value.winning_team.tag +  "</div>"
 
                                                 var matchBlock = "<div class='match-info'> <div class='map-state'>" + state.toUpperCase() + "</div>"
